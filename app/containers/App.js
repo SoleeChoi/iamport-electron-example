@@ -1,15 +1,17 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-type Props = {
-  children: React.Node
-};
+import HomePage from './HomePage';
+import PaymentPage from './PaymentPage';
+import CertificationPage from './CertificationPage';
 
-export default class App extends React.Component<Props> {
-  props: Props;
+import routes from '../constants/routes';
 
-  render() {
-    const { children } = this.props;
-    return <>{children}</>;
-  }
-}
+export default () => (
+  <Switch>
+    <Route path={routes.PAYMENT} component={PaymentPage} />
+    <Route path={routes.CERTIFICATION} component={CertificationPage} />
+    <Route path="" component={HomePage} />
+  </Switch>
+);

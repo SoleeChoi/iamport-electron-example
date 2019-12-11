@@ -92,6 +92,15 @@ app.on('ready', async () => {
     }
   });
 
+  // mainWindow.webContents.on('new-window', (event, url) => {
+  //   event.preventDefault();
+
+  //   const newWindow = new BrowserWindow({ show: false });
+  //   newWindow.once('ready-to-show', () => newWindow.show());
+  //   newWindow.loadURL(url);
+  //   event.newGuest = newWindow;
+  // });
+
   mainWindow.on('closed', () => {
     mainWindow = null;
   });

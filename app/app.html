@@ -2,7 +2,32 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Hello Electron React!</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
+    />
+    <title>아임포트 일렉트론 테스트</title>
+
+    <!-- Insert this line above script imports  -->
+    <script>
+      if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-latest.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.iamport.kr/js/iamport.payment-1.1.7.js"
+    ></script>
+    <script>
+      if (window.module) module = window.module;
+    </script>
+
     <script>
       (function() {
         if (!process.env.HOT) {
@@ -34,6 +59,7 @@
             ? 'http://localhost:' + port + '/dist/renderer.dev.js'
             : './dist/renderer.prod.js'
         );
+        // scripts.push('http://localhost:' + port + '/dist/renderer.dev.js');
 
         document.write(
           scripts

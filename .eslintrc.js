@@ -6,5 +6,9 @@ module.exports = {
         config: require.resolve('./configs/webpack.config.eslint.js')
       }
     }
+  },
+  rules: {
+    'no-eval':
+      ['error', { allowIndirect: true }]
   }
 }

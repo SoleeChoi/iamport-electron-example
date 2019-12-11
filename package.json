@@ -1,8 +1,8 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
-  "version": "0.18.0",
-  "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
+  "name": "iamport-electron-example",
+  "productName": "IamportElectronExample",
+  "version": "0.9.0",
+  "description": "일렉트론 환경에서 아임포트 일반/정기결제 및 휴대폰 본인인증을 테스트 해볼 수 있는 예제 프로젝트입니다.",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development webpack --config ./configs/webpack.config.renderer.dev.dll.babel.js --colors",
@@ -56,8 +56,8 @@
     ]
   },
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.develar.ElectronReact",
+    "productName": "IamportElectronExample",
+    "appId": "org.develar.IamportElectronExample",
     "files": [
       "dist/",
       "node_modules/",
@@ -110,9 +110,9 @@
     "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
   },
   "author": {
-    "name": "Electron React Boilerplate Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://electron-react-boilerplate.js.org"
+    "name": "Solee Choi",
+    "email": "mymusese@gmail.com",
+    "url": "https://github.com/soleechoi"
   },
   "contributors": [
     {
@@ -193,6 +193,7 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-dev-expression": "^0.2.2",
+    "babel-plugin-import": "^1.13.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "chalk": "^3.0.0",
     "concurrently": "^5.0.0",
@@ -261,6 +262,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
     "@hot-loader/react-dom": "^16.11.0",
+    "antd": "^3.26.2",
     "connected-react-router": "^6.6.1",
     "core-js": "^3.4.5",
     "devtron": "^1.4.0",
@@ -276,7 +278,8 @@
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "source-map-support": "^0.5.16"
+    "source-map-support": "^0.5.16",
+    "styled-components": "^4.4.1"
   },
   "devEngines": {
     "node": ">=7.x",
