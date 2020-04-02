@@ -47,14 +47,15 @@ function PaymentPage({ form, history }) {
             case 'callback':
               break;
             case 'card_quota':
-              data.display = { card_quota: values[key] };
+              data.display = {
+                card_quota: values[key].replace(/\s/g, '').split(',')
+              };
               break;
             default:
               data[key] = values[key];
               break;
           }
         });
-
         IMP.request_pay(data, response => {
           window.eval(values.callback);
           callback(response);
