@@ -11,7 +11,7 @@ export default function HomePage() {
     <Container>
       <Tag>
         {`
-          프로젝트 버전: v0.9.0
+          프로젝트 버전: v0.9.1
           아임포트 SDK 버전: v1.1.7
         `}
       </Tag>
